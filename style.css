@@ -1,0 +1,1106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: GT America Cm Rg;
+    /* font-family: gilroy; */
+
+}
+*::selection{
+    color: white;
+    background-color: black;
+}
+@font-face {
+    font-family: america;
+    src: url(./GT-America-Compressed-Bold.ttf);
+}
+@font-face {
+    font-family: america-b;
+    src: url(./GT-America-Condensed-Bold-Trial.otf);
+}
+@font-face {
+    font-family: america-bb;
+    src: url(./GT-America-Compressed-Bold-Trial.otf);
+}
+@font-face {
+    font-family: america-t;
+    src: url(./GT-America-Compressed-Thin.ttf);
+}
+@font-face {
+    font-family: america-r;
+    src: url(./GT-America-Standard-Regular.ttf);
+}
+@font-face {
+    font-family: america-cr;
+    src: url(./GT-America-Compressed-Regular.ttf);
+}
+@font-face {
+    font-family: america-er;
+    src: url(./GT-America-Extended-Regular.ttf);
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-family: america;
+    overflow: hidden;
+    font-size: 1.3vw;
+    color: rgb(196, 85, 8);
+    z-index: 99;
+    font-weight: 900;
+    padding: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#nav>h3{
+    font-family: america;
+    position: relative;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    opacity: 0.9;
+    padding: 0px 10px;
+}
+#nav>h3:last-child{
+     margin-right: 30px;
+}
+#nav>h3:nth-child(3){
+    left: 10%;
+}
+#nav>h3:nth-child(2){
+    left: -5%;
+}
+#nav>h3::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    background-color:rgb(196, 85, 8);
+}
+@keyframes anime {
+    0%{
+        left: 0;
+        width: 0;
+    }
+    50%{
+        left: 0;
+        width: 100%;
+
+    }
+    100%{
+        left: 100%;
+        width: 0;
+    }
+    
+}
+#nav>h3:hover::after{
+    animation-name: anime;
+    animation-duration: 1s;
+}
+#nav>h3:hover{
+    opacity: 1;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.4);
+    -ms-transform: translate(-50%, -50%) scale(1.4);
+    transform: translate(-50%, -50%) scale(1.4);
+    z-index: 99;
+    fill: #c45508;
+}
+
+path {
+    fill: inherit;
+}
+#full-scr {
+    display: none;
+}
+
+
+
+#main{
+    position: relative;
+}
+#page1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color:rgb(196, 85, 8) ;
+    background-image: url(./image.png);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+#page1>h1{
+    position: absolute;
+    font-size: 15.7vw;
+    text-transform: uppercase;
+    bottom: -9%;
+    padding:10px;
+    text-align: center;
+    font-family: america-bb;
+    font-weight:950;
+    letter-spacing: -5px;
+}
+#page1>h1::before{
+    content: "BOWNDS RANCHES.EST.1885";
+    font-weight: 500;
+    position: absolute;
+    /* bottom: 0; */
+    font-size: .9vw;
+    left: 1.5%;
+    font-family: gilroy;
+    letter-spacing: .5px;
+}
+#page1>h1::after{
+    content: "MARKETING & SELLING TEXAS RANCHES";
+    font-weight: 500;
+    position: absolute;
+    font-size: .9vw;
+    right: 1.5%;
+    font-family: gilroy;
+    letter-spacing: .5px;
+}
+#overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+
+#scroll{
+    position: absolute;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-image: url(./buttonDarkBg.jpg);
+    color: white;
+    font-weight: 700;
+    scale: 0;
+    font-family: america;
+    transition: all ease-out .2s;
+}
+#page2{
+    width: 100%;
+    height: 230vh;
+    position: relative;
+    background-image: url(./map.jpg);
+    background-position: top 90%;
+    background-size: cover;
+
+}
+#page2>h1{
+    font-family: america-bb;
+    font-size: 12vw;
+    text-align: center;
+    line-height: 9vw;
+    padding:80px 10px;
+    font-weight: 900;
+    word-spacing:-5px ;
+    position: relative;
+
+}
+#page2>h1::before{
+    content: "THE  REPRESENTATION  YOU  DESERVE";
+    font-size: 1vw;
+    font-weight: 450;
+    font-family: gilroy;
+    position: absolute;
+    top: 68vh;
+    /* bottom: 62%; */
+    left: 10%;
+    word-spacing:0;
+    width: 10%;
+    line-height: 1;
+    text-align: left;
+}
+#page2>h1::after{
+    content: "ONE OF AMERICA’S BEST BROKERAGES";
+    font-size: 1vw;
+    font-weight: 450;
+    font-family: gilroy;
+    position: absolute;
+    /* bottom: 62%; */
+    top: 68vh;
+    right: 9%;
+    word-spacing:0;
+    width: 10%;
+    line-height: 1;
+    text-align: right;
+}
+#page2>img{
+    height: 900px;
+    position: relative;
+    left: 27vw;
+    top: -15vh;
+    rotate: -7deg;
+    transform-origin: left 20%;
+}
+#page2>h2{
+    font-size: 12.3vw;
+    line-height: 9.4vw;
+    word-spacing: -10px;
+    text-align: center;
+    color: #111;
+    position: relative;
+    font-family: america-bb;
+    padding: 80px 10px;
+    position: relative;
+    top: -28vh;
+    font-weight: 900;
+}
+#page2 h2::after{
+    content: "THIRD GENERATION FAMILY-OWNED RANCH BROKERAGE";
+    font-size: 1.2vw;
+    line-height: 1.3vw;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    word-spacing: 0px;
+    letter-spacing:0px;
+    font-family: gilroy;
+    font-weight: 600;
+    transform: translate(-50%,0);
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #111;
+}
+
+#page3>h1{
+    color: #fff;
+    font-size: 8vw;
+    letter-spacing: -5px;
+    word-spacing: 0px;
+    line-height: 7vw;
+    padding: 100px 180px;
+    font-family: america;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0;
+    color: #F9F5EB;
+}
+#page3>h2{
+    color: #F9F5EB;
+    font-size: 7.5vw;
+    word-spacing: -5px;
+    letter-spacing: -5px;
+    font-weight: 100;
+    font-family: america-cr;
+    line-height: 1;
+    text-align: center;
+    -webkit-text-stroke: 3px #111;
+    text-transform: uppercase;
+}
+#page3 p{
+    color: #F9F5EB;
+    font-size: 1vw; 
+    width: 50%;
+    font-weight: 600;
+    font-family: gilroy;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+    text-transform: uppercase;
+
+}
+
+#img-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/9b2b1e20d57cf6988eb3192c1a261b8475d701d4-8192x5464.jpg/JRP_BR_01_1165-Edit.jpg?rect=1038,632,3956,4832&bg=F2F1EC&fp-x=0.3681506849315068&fp-y=0.5578489448352462&w=640&h=815&fit=crop&crop=focalpoint&auto=format);
+    background-position: top;
+    background-size: cover;
+    transition: all linear 0.2s;
+    overflow: hidden;
+    opacity: 0;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+}
+#img-div>h5{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 10px;
+    z-index: 99;
+    background-color: #fff;
+    font-family: america;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #111;
+    margin-top: 0;
+    border-top: 2px solid #111;
+    position: relative;
+    color: white;
+}
+#page4>h4{
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: america-er;
+    letter-spacing: 1px;
+    font-size: 1.2vw;
+    margin-bottom: 5vh;
+    position: relative;
+}
+#page4>.box{
+    width: 100%;
+    height: 25vh;
+    position: relative;
+    text-align: center;
+    font-family: america;
+    padding: 1px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: .2; */
+    
+}
+#page4>#box5{
+    border-bottom: 1px solid white;
+}
+#page4>.box>h1{
+    font-family: america;
+    font-size: 13vw;
+    opacity: .2;
+}
+#page4>.box>.moving{
+    white-space: nowrap;
+    position: absolute;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    opacity: .2;
+
+}
+#page4>.box:hover .moving{
+    opacity: 1;
+}
+#page4>.box:hover .moving>h2{
+    opacity: 1;
+}
+#page4>.box:hover h1{
+    opacity: 0;
+}
+
+#page4>.box>.moving>h2{
+    display: inline-block;
+    font-family: america;
+    font-size: 13vw;
+    animation-name: scroller;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    z-index: 999;
+}
+#page4>.box>.moving::-webkit-scrollbar{
+    display: none;
+}
+@keyframes scroller {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+#page4>button{
+    background-image: url(./buttonBg.svg);
+    padding: 10px 20px;
+    position: absolute;
+    border: none;
+    font-family: america;
+    text-transform: uppercase;
+    font-size: 17px;
+    z-index: 99;
+    opacity: 0;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+    
+}
+#page4>img{
+    height: 350px;
+    position: absolute;
+    width: 260px;
+    z-index: 9;
+    opacity: 0;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+}
+
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+    color:  #F9F5EB;
+}
+#page5>h1{
+    font-family: america;
+    font-size: 12vw;
+    text-align: center;
+    padding: 200px 100px;
+    line-height: 9.5vw;
+    position: relative;
+}
+
+#page5>h1::before{
+    content: "WE MARKET & SELL TEXAS RANCHES";
+    font-size: .9vw;
+    position: absolute;
+    top: 60vh;
+    font-family: america-r;
+    font-weight: 400;
+    left: 10%;
+}
+#page5>h1::after{
+    content: "OVER SIX DECADES OF EXPERIENCE ACROSS TEXAS";
+    font-size: .9vw;
+    position: absolute;
+    top: 68vh;
+    font-family: america-r;
+    font-weight: 400;
+    right:5%;
+    width: 18%;
+    line-height: 1vw;
+}  
+#page5>h6{
+    font-size: .9vw;
+    font-family: america-r;
+    position: relative;
+    font-weight: 400;
+    left: 45%;
+    top: -23vh;
+}
+#page5>h5{
+    width: 13%;
+    font-size: 2vw;
+    font-family: america-cr;
+    font-weight: 200;
+    position: relative;
+    text-align: center;
+    line-height: 2vw;
+}
+#page5>#one{
+    left: 10%;
+}
+#page5>#two{
+    left: 45%;
+    top: -10vh;
+}
+#page5>#three{
+    right: -80%;
+    top: -20vh;
+}
+#page5>#four{
+    left: 25%;
+}
+#page5>#five{
+    /* left: 25%; */
+    right: -63%;
+    top: -9vh;
+}
+#page6{
+    height: 110vh;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+}
+#page6>.pin{
+    width: 48vw;
+    height: 58vh;
+    background-color: red;
+    position: relative;
+}
+#page6>#pin1{
+    background-image: url(./pin1.webp);
+    background-position: center;
+    background-size: cover;
+    left: 25%;
+    rotate: -5deg;
+    top:55vh;
+    transform-origin:center ;
+    opacity: 0;
+
+}
+#page6>#pin2{
+    background-image: url(./pin2.webp);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 25%;
+    top: 30vh;
+    rotate: -5deg;
+}
+#page7{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+    text-align: center;
+    color: #F9F5EB;
+    /* padding: 100px; */
+}
+#page7>h1{
+    font-family: america-bb;
+    font-size: 8vw;
+    padding: 150px;
+    line-height: 7vw;
+    position: relative;
+}
+#page7>p{
+    text-transform: uppercase;
+    width: 35%;
+    font-family: america-r;
+    position: relative;
+    top: -20vh;
+    left: 33%;
+    font-size: 1vw;
+}
+#move{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    background-image: url(./move.webp);
+    background-position: top;
+    background-size: cover;
+    transition: all linear 0.2s;
+    overflow: hidden;
+    opacity: 0;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+}
+#move>h5{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 5px;
+    z-index: 99;
+    background-color: #fff;
+    font-family: america;
+    color: black;
+}
+#page8{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #000000;
+    color: white;
+    background-image: url(./dopage.webp);
+    background-size: cover;
+}
+#page8>h1{
+    font-size: 8vw;
+    font-family: america;
+    line-height: 7vw;
+    padding: 50px;
+}
+#page8>h6{
+    position: relative;
+    font-size: 1vw;
+    width: 23%;
+    left: 69%;
+    top: 10vh;
+    font-family: america-r;
+    margin-bottom: 4vh;
+}
+#page8>button{
+    padding:15px 38px;
+    font-family: america;
+    width: 180px;
+    height: 50px;
+    position: relative;
+    left: 69%;
+    background-color: transparent;
+    color: #fff;
+    top: 10vh;
+    outline: none;
+    border: 1px solid white;
+    font-size: 1.5vw;
+    transition: all ease 0.2s;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page8>button>h6{
+    font-family: america;
+    z-index: 9999;
+    position: absolute;
+}
+#page8>button::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    left: 0;
+    top: 100%;
+    transition: all ease 0.2s;
+    /* z-index: -1; */
+}
+#page8>button:hover{
+    color: #111;
+    /* z-index: 9999; */
+}
+#page8>button:hover::after{
+    top: 0;
+}
+#page8>#line{
+    width: 100%;
+    max-height: 2px;
+    border-bottom: 1px solid white;
+    position: relative;
+    top: 20vh;
+    margin-top: 15vh;
+    margin-bottom: 25vh;
+}
+#page8>h2{
+    font-size: 4vw;
+    text-align: center;
+    font-family: america;
+    line-height: 3.5vw;
+    padding: 210px;
+    font-weight: 400;
+
+}
+#page8>h2::before{
+    content: "WHAT OUR VALUED CLIENTS SAY";
+    text-align: center;
+    width: 13%;
+    font-size: .9vw;
+    font-family: america-r;
+    position: absolute;
+    top: 140vh;
+    left: 42%;
+    line-height: .8vw;
+    
+}
+
+#page8>#but{
+    /* background-color: red; */
+    top: -20vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page8>#but>button{
+    padding: 15px 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: america;
+    position: relative;
+    font-size: 1.4vw;
+    height: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#page8>#but>button>h6{
+    font-family: america;
+    z-index: 9999;
+    position: absolute;
+}
+#page8>#but>button::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    left: 0;
+    top: 100%;
+    transition: all ease 0.2s;
+    /* z-index: -1; */
+}
+#page8>#but>button:hover{
+    color: #111;
+    /* z-index: 9999; */
+}
+#page8>#but>button:hover::after{
+    top: 0;
+}
+#page9{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+
+}
+
+#page9-first{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+#page9-first>h1{
+    font-family: america;
+    font-size: 4vw;
+}
+#page9-first>button{
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-family: america;
+    font-size: 1.5vw;
+    right: 50px;
+    position: relative;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#page9-first>button>h6{
+    font-family: america;
+    z-index: 9999;
+    position: absolute;
+}
+#page9-first>button::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(0, 0, 0);
+    left: 0;
+    top: 100%;
+    transition: all ease 0.2s;
+    /* z-index: -1; */
+}
+#page9-first>button:hover{
+    color: #fefefe;
+    /* z-index: 9999; */
+}
+#page9-first>button:hover::after{
+    top: 0;
+}
+#page9-img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+
+    height: 80vh;
+    
+
+}
+
+#page9-img>.boxes{
+    width: 31%;
+    height: 100%;
+}
+#page9-img>.boxes>.box-img{
+    height: 85%;
+    width: 100%;
+    overflow: hidden;
+}
+#page9-img>.boxes>.box-img>img{
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease;
+}
+#page9-img>.boxes>.box-img:hover img{
+    cursor: pointer;
+    transform:scale(1.08);
+    transition: all 0.5s ease-in-out;
+}
+#page9-img>.boxes>.boxes-bot{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #99885c; */
+    padding: 10px 0px;
+}
+#page9-img>.boxes>.boxes-bot>.box-bot-1>h1{
+    font-family: america;
+    font-size: 2.5vw;
+    line-height: 1;
+
+}
+#page9-img>.boxes>.boxes-bot>.box-bot-1>h6{
+    font-size: 1.1vw;
+    font-family: america-er;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+#page9-img>.boxes>.boxes-bot>.box-bot-2{
+    font-weight: 700;
+    font-family: america;
+}
+
+#read{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    font-size: 1.2vw;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    display: flex;
+    z-index: 99999;
+    align-items: center;
+    font-weight: 800;
+    font-family: america;
+    justify-content: center;
+    background-image: url(./buttonBg.svg);
+    background-position: center;
+    background-size: cover;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+}    
+#page10{
+    position: relative;
+    width: 100%;
+    height: 180vh;
+    background-color: #111;
+    color: white;
+
+}
+#page10>h1{
+    font-size: 11vw;
+    width: 50%;
+    line-height: 8.9vw;
+    font-family: america;
+    padding: 15px;
+    margin-bottom: 150px;
+}
+#page10>svg{
+    width: 5.7vw;
+    position: relative;
+    left: 49%;
+    /* top: 30vh; */
+}
+#page10>h4{
+    font-size: 2.5vw;
+    font-family: america;
+    font-weight: 600;
+    width: 10%;
+    line-height: 2vw;
+    left: 48%;
+    transform-origin: center;
+    top: 6%;
+    position: relative;
+}
+#page10>h4>span{
+    font-size: 2.6vw;
+    font-family: america;
+    font-weight: 600;
+}
+#page10>h2{
+    font-size: 11.2vw;
+    font-family: america;
+    text-align: right;
+    width: 70%;
+    right: -28%;
+    top: 20%;
+    position: relative;
+    line-height: 9vw;
+    letter-spacing: -2px;
+    word-spacing: -2px;
+}
+#data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* background-color: rgb(158, 47, 56); */
+    top: 60vh;
+}
+#email>input{
+    font-family: america-t;
+    font-size: 2vw;
+    padding: 10px 25px;
+    font-weight: 600;
+    width: 350px;
+    background:transparent;
+    outline: none;
+    color: currentColor;
+    border: none;
+}
+#email>input::placeholder{
+    color: white;
+}
+#data>#signup>button{
+    padding:10px 20px;
+    font-family: america;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.8vw;
+    /* width: 100px; */
+}
+#page10>hr{
+    position: relative;
+    top: 60vh;
+    width: 97%;
+    left: 1.2%;
+}
+#page11{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: #111;
+    display: flex;
+}
+#page11-1{
+    width: 60%;
+    position: relative;
+    height: 100%;
+    /* background-color: cadetblue; */
+    padding: 20px 0;
+}
+#page11-1>h1{
+    font-size: 12vw;
+    font-family: america;
+    padding: 10px;
+    color: white;
+    letter-spacing: -3px;
+}
+#page11-2{
+    width: 40%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+#page11-2>h5{
+    font-family: america;
+    font-size: 2vw;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+#page11-2>h5:nth-child(2){
+    left: 1%;
+}
+#page11-2>h5:nth-child(3){
+    left: -1%;
+}
+#page11>#page11-2>h5::after{
+    content:"";
+    position: absolute;
+    left: -100%;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    background-color:rgb(248, 249, 248);
+    transition: all ease .5s;
+}
+#page11>#page11-2>h5:hover::after{
+    left: 0;
+}
+#lll{
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: .8px solid rgb(140, 136, 136);
+    color: white;
+}
+#lll>h6{
+    font-family: america-er;
+    font-size: .8vw;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+#final{
+    width: 25%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 29px;
+    
+}
+#final>h5{
+    font-family: america;
+    width: 40%;
+    font-weight: 500;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    line-height: 1vw;
+    position: relative;
+}
+#final>h5:nth-child(2){
+    left: -5%;
+}
+
+
+
+#final>h5::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    background-color:rgb(250, 250, 250);
+}
+@keyframes anime {
+    0%{
+        left: 0;
+        width: 0;
+    }
+    50%{
+        left: 0;
+        width: 100%;
+
+    }
+    100%{
+        left: 100%;
+        width: 0;
+    }
+    
+}
+#final>h5:hover::after{
+    animation-name: anime;
+    animation-duration: 1s;
+}
